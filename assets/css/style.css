@@ -1,0 +1,69 @@
+/* General */
+body{
+    background-image: url(../images/bg-main.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Navbar */
+nav{
+    position: fixed;
+    width: 100vw;
+}
+
+nav div{
+    display: flex;
+    margin: 0 10%;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav div div{
+    width: 30vw;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav div div a{
+    margin-left: 4%;
+    width: auto;
+    text-decoration: none;
+    color: white;
+}
+
+nav div div button{
+    display: none;
+}
+
+@media screen and (max-width: 500px){
+    
+    nav{
+        position: fixed;
+        width: 100vw;
+    }
+
+    nav div div a{
+        display: none
+    }
+
+    nav div div button{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 2px;
+        font-size: 30px;
+        color: white;
+        text-align: center;
+    }
+}
+
+/* Seccion principal */
+main{
+    padding-top: 60px;
+}
