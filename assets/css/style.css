@@ -12,7 +12,10 @@ body{
 nav{
     position: fixed;
     width: 100vw;
-    background-color: hsla(202, 15%, 63%, 0.5);
+    /* background-color: hsla(202, 15%, 63%, 0.5); */
+    /* backdrop-filter: blur(30px);  doesn't work in Firefox :c */
+    background-color: rgba(10, 4, 4, 0.4);
+    backdrop-filter: saturate(180%) blur(30px);
 }
 
 nav div{
