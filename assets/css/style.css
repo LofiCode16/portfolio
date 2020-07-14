@@ -100,6 +100,15 @@ main{
     margin: 0;
 }
 
+/* Carousel */
+.carousel .slide:first-of-type{
+    display: inline;
+}
+
+.carousel .slide:last-of-type{
+    display: none;
+}
+
 
 /* Puntos de quiebre */
 @media screen and (max-width: 600px){
