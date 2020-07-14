@@ -44,7 +44,7 @@ nav div div button{
 
 /* Sección principal */
 main{
-    padding-top: 60px;
+    padding-top: 20px;
 }
 
 .about{
@@ -106,6 +106,10 @@ main{
         width: 100vw;
     }
 
+    nav div div{
+        width: auto;
+    }
+
     nav div div a{
         display: none
     }
@@ -116,8 +120,8 @@ main{
         height: 40px;
         background-color: transparent;
         border: 2px solid white;
-        border-radius: 2px;
-        font-size: 30px;
+        border-radius: 10px;
+        font-size: 28px;
         color: white;
         text-align: center;
     }
