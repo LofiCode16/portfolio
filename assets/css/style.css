@@ -5,12 +5,14 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
 }
 
 /* Navbar */
 nav{
     position: fixed;
     width: 100vw;
+    background-color: hsla(202, 15%, 63%, 0.5);
 }
 
 nav div{
