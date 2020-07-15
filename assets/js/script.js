@@ -6,10 +6,10 @@ function changeSlide(){
 
 function switchSlide(slide){
     if(slide[0].style.display == 'none'){
-        slide[0].style.display = 'inline';
+        slide[0].style.display = 'flex';
         slide[1].style.display = 'none';
     } else {
         slide[0].style.display = 'none';
-        slide[1].style.display = 'inline';
+        slide[1].style.display = 'flex';
     }
 }

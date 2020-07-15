@@ -101,12 +101,39 @@ main{
 }
 
 /* Carousel */
+.tools{
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tools h2, .carousel{
+    display: flex;
+    color: white;
+}
+
+.carousel{
+    width: 50%;
+    margin-left: 10%;
+}
+
 .carousel .slide:first-of-type{
-    display: inline;
+    display: flex;
 }
 
 .carousel .slide:last-of-type{
     display: none;
+}
+
+.slide {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slide div{
+    display: flex;
 }
 
 
@@ -156,9 +183,28 @@ main{
         text-align: center;
         width: 100%;
     }
+
+    .carousel{
+        margin-left: 0;
+        margin-top: 10%;
+        width: 100%;
+    }
+
+    .tools{
+        flex-direction: column;
+    }
+
 }
 
 @media screen and (min-width: 601px) and (max-width: 1000px){
+
+    .aptitudes{
+        width: auto !important;
+    }
+
+    .aptitudes ul{
+        margin: 5% 40% !important;
+    }
 
     .about article figure {
         width: auto;
