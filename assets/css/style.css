@@ -11,6 +11,7 @@ body{
 /* Navbar */
 nav{
     position: fixed;
+    z-index: 2;
     width: 100vw;
     /* background-color: hsla(202, 15%, 63%, 0.5); */
     /* backdrop-filter: blur(30px);  doesn't work in Firefox :c */
@@ -114,20 +115,17 @@ main{
 }
 
 .carousel{
-    width: 50%;
-    margin-left: 10%;
+    width: 60%;
+    padding-bottom: 7%;
 }
 
-.carousel .slide:first-of-type{
+.carousel .slide{
     display: flex;
-}
-
-.carousel .slide:last-of-type{
-    display: none;
+    position: absolute;
 }
 
 .slide {
-    width: 100%;
+    width: 48%;
     display: flex;
     justify-content: space-between;
 }
@@ -136,6 +134,73 @@ main{
     display: flex;
 }
 
+.slide div img{
+    width: 120px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.separator{
+    margin: 5% 10% 0 10%;
+}
+
+@keyframes cf3FadeInOut {
+    0% {
+        opacity:1;
+    }
+    45% {
+        opacity:1;
+    }
+    55% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+ }
+ 
+#main-slide {
+    z-index: 1;
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+}
+
+
+/* Proyectos */
+.projects{
+    padding: 5% 0;
+    background-color: rgba(10, 4, 4, 0.4);
+    backdrop-filter: saturate(180%) blur(30px);
+}
+
+.projects h2{
+    text-align: center;
+    color: white;
+    margin-bottom: 5%;
+}
+
+.projects article{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10%
+}
+
+.projects article div{
+    width: 30%;
+}
+
+.projects article div figure{
+    margin: 5% 0;
+}
+
+.projects article div figure img{
+    width: 100%;
+    height: 200px;
+}
 
 /* Puntos de quiebre */
 @media screen and (max-width: 600px){
@@ -185,8 +250,7 @@ main{
     }
 
     .carousel{
-        margin-left: 0;
-        margin-top: 10%;
+        margin: 10% 0;
         width: 100%;
     }
 
@@ -194,12 +258,46 @@ main{
         flex-direction: column;
     }
 
+    .tools h2{
+        text-align: center;
+    }
+
+    .slide{
+        width: 80%; 
+    }
+
+    .slide div img{
+        width: 70px;
+        height: 60px;
+    }
+
+    .projects article{
+        flex-direction: column;
+    }
+
+    .projects article div{
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1000px){
 
+    .tools h2{
+        width: 30%;
+    }
+
+    .slide{
+        width: 53%;
+    }
+
     .carousel{
         width: 70%;
+        margin-left: 5%;
+    }
+
+    .slide div img{
+        width: 80px;
+        height: 70px;
     }
 
     .aptitudes{
