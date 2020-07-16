@@ -103,7 +103,7 @@ main{
 
 /* Carousel */
 .tools{
-    margin: 0 10%;
+    margin: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -141,7 +141,7 @@ main{
 }
 
 .separator{
-    margin: 5% 10% 0 10%;
+    margin: 0 10%;
 }
 
 @keyframes cf3FadeInOut {
@@ -191,15 +191,47 @@ main{
 
 .projects article div{
     width: 30%;
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding-bottom: 20px;
 }
 
 .projects article div figure{
-    margin: 5% 0;
+    margin: 0;
 }
+    
 
 .projects article div figure img{
     width: 100%;
-    height: 200px;
+    height: 30%;
+    border-radius: 10px 10px 0 0;
+}
+
+.projects article div h4{
+    text-align: center;
+}
+
+.projects article div p{
+    margin: 20px;
+}
+
+.projects article div div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 0;
+    padding-top: 10px;
+}
+
+.projects article div div button{
+    width: 100px;
+    height: 35px;
+    background-color: transparent;
+    border: 2px solid cornflowerblue;
+    border-radius: 5px;
+    color: cornflowerblue;
 }
 
 /* Puntos de quiebre */
@@ -315,6 +347,7 @@ main{
     .about article figure img{
         margin: 0 30%;
     }
+
 }
 
 

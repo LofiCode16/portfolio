@@ -58,6 +58,7 @@ function createCard(project){
     var img = document.createElement('img');
     var h4 = document.createElement('h4');
     var p = document.createElement('p');
+    var divButton = document.createElement('div');
     var button = document.createElement('button');
     
     var title = document.createTextNode(project.name);
@@ -72,8 +73,9 @@ function createCard(project){
     figure.appendChild(img);
     div.appendChild(figure);
     div.appendChild(h4);
-        div.appendChild(p);
-    div.appendChild(button);
+    div.appendChild(p);
+    divButton.appendChild(button)
+    div.appendChild(divButton);
     
     return div;
 }
