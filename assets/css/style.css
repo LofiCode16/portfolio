@@ -170,7 +170,7 @@ main {
 }
 
 /* Experiencias */
-#experiences {
+#experiences, #contact {
   color: white;
   text-align: center;
   margin: 5% 10%;
@@ -265,6 +265,14 @@ main {
   color: white;
   background-color: cornflowerblue;
   transform: scale(1.2);
+}
+
+/* Contacto */
+.typeform-widget{
+    width: 100%;
+    height: 500px;
+    margin: 7% 0;
+    opacity: 0.9;
 }
 
 /* Puntos de quiebre */
