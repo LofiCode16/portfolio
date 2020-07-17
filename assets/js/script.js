@@ -2,27 +2,32 @@ var projects = [
     {
         name: 'Proyecto 1',
         desc: 'Este es el proyecto uno',
-        image: 'assets/images/ex.jpg'
+        image: 'assets/images/ex.jpg',
+        url: 'https://www.github.com'
     },
     {
         name: 'Proyecto 2',
         desc: 'Este es el proyecto dos',
-        image: 'assets/images/ex.jpg'
+        image: 'assets/images/ex.jpg',
+        url: 'https://www.github.com'
     },
     {
         name: 'Proyecto 3',
         desc: 'Este es el proyecto tres',
-        image: 'assets/images/ex.jpg'
+        image: 'assets/images/ex.jpg',
+        url: 'https://www.github.com'
     },
     {
         name: 'Proyecto 4',
         desc: 'Este es el proyecto cuatro',
-        image: 'assets/images/ex.jpg'
+        image: 'assets/images/ex.jpg',
+        url: 'https://www.github.com'
     },
     {
         name: 'Proyecto 5',
         desc: 'Este es el proyecto cinco',
-        image: 'assets/images/ex.jpg'
+        image: 'assets/images/ex.jpg',
+        url: 'https://www.github.com'
     }
 ];
 
@@ -51,8 +56,8 @@ function groupBy(arr, n) {
 };
 
 
-function createCard(project){
-    
+function createCard(data){
+
     var div = document.createElement('div');
     var figure = document.createElement('figure');
     var img = document.createElement('img');
@@ -61,14 +66,16 @@ function createCard(project){
     var divButton = document.createElement('div');
     var button = document.createElement('button');
     
-    var title = document.createTextNode(project.name);
-    var desc = document.createTextNode(project.desc);
+    var title = document.createTextNode(data.name);
+    var desc = document.createTextNode(data.desc);
     var textButton = document.createTextNode('Ir a Github');
     
-    img.src = project.image;
+    img.src = data.image;
     h4.append(title);
     p.append(desc);
     button.append(textButton);
+    div.className = 'card'
+    img.dataset.url = data.url;
     
     figure.appendChild(img);
     div.appendChild(figure);
@@ -80,7 +87,22 @@ function createCard(project){
     return div;
 }
 
+function showPage(url){    
+    var win = window.open(url, '_blank');
+    if (win) {
+        win.focus();
+    } else {
+        alert('Habilita los Pop-ups para ver el contenido! :D');
+    }
+}
+
+function goToUrl(event){
+    var url = event.target.dataset.url;
     
+    if(url){
+        showPage(url);
+    }
+}
 
 
 {/* <div>
