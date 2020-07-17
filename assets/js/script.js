@@ -31,10 +31,33 @@ var projects = [
     }
 ];
 
+var experiences = [
+    {
+        company: 'Academia Desafío Latam',
+        logo: 'assets/images/ex.jpg',
+        position: 'Docente',
+        start: 'Dic 2019',
+        end: 'actualidad'
+    }
+]
+
 var cardDeck = document.getElementById('card-deck');
 var projectSection = document.getElementById('projects');
+var experienceSection = document.getElementById('experiences');
 
+var groupExperiences = groupBy(experiences, 3)
 var groupProjects = groupBy(projects, 3);
+
+groupExperiences.forEach(function(experiences){
+    var article = document.createElement('article');
+
+    experiences.forEach(function(experience){
+        var caption = createCaption(experience);
+        article.appendChild(caption);
+    });
+
+    experienceSection.appendChild(article);
+});
 
 groupProjects.forEach(function(projects){
     var article = document.createElement('article');
@@ -54,6 +77,32 @@ function groupBy(arr, n) {
     group.push(arr.slice(i * n, (i + 1) * n));
     return group;
 };
+
+function createCaption(data){
+    var div = document.createElement('div');
+    var figure = document.createElement('figure');
+    var img = document.createElement('img');
+    var h4 = document.createElement('h4');
+    var h5 = document.createElement('h5');
+    var p = document.createElement('p');
+
+    var company = document.createTextNode(data.company);
+    var position = document.createTextNode(data.position);
+    var duration = document.createTextNode(`${data.start} - ${data.end}`);
+    
+    img.src = data.logo;
+    h4.append(company);
+    h5.append(position);
+    p.append(duration);
+
+    figure.appendChild(img);
+    div.appendChild(figure);
+    div.appendChild(h4);
+    div.appendChild(h5);
+    div.appendChild(p);
+
+    return div;
+}
 
 
 function createCard(data){
