@@ -82,8 +82,8 @@ function createCaption(data){
     var div = document.createElement('div');
     var figure = document.createElement('figure');
     var img = document.createElement('img');
+    var h3 = document.createElement('h3');
     var h4 = document.createElement('h4');
-    var h5 = document.createElement('h5');
     var p = document.createElement('p');
 
     var company = document.createTextNode(data.company);
@@ -91,14 +91,14 @@ function createCaption(data){
     var duration = document.createTextNode(`${data.start} - ${data.end}`);
     
     img.src = data.logo;
-    h4.append(company);
-    h5.append(position);
+    h3.append(company);
+    h4.append(position);
     p.append(duration);
 
     figure.appendChild(img);
     div.appendChild(figure);
+    div.appendChild(h3);
     div.appendChild(h4);
-    div.appendChild(h5);
     div.appendChild(p);
 
     return div;
