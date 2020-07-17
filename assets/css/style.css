@@ -327,6 +327,7 @@ main{
 
     .projects article div div button{
         display: inline-block;
+        cursor: pointer;
     }
 
     .projects article div.card{

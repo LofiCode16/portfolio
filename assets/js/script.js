@@ -76,6 +76,7 @@ function createCard(data){
     button.append(textButton);
     div.className = 'card'
     img.dataset.url = data.url;
+    button.dataset.url = data.url;
     
     figure.appendChild(img);
     div.appendChild(figure);
