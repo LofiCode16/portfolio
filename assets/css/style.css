@@ -110,7 +110,7 @@ main {
 }
 
 .tools h2,
-.carousel {
+.carousel, footer {
   display: flex;
   color: white;
 }
@@ -273,6 +273,31 @@ main {
     height: 500px;
     margin: 7% 0;
     opacity: 0.9;
+}
+
+/* Footer */
+footer{
+    padding: 5% 10%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(10, 4, 4, 0.4);
+    backdrop-filter: saturate(180%) blur(30px);
+  
+}
+
+footer div{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer div a{
+    text-decoration: none;
+    color: white;
+}
+
+footer div i.fa{
+    font-size: 64px;
 }
 
 /* Puntos de quiebre */
