@@ -1,3 +1,13 @@
+var experiences = [
+    {
+        company: 'Academia Desafío Latam',
+        logo: 'assets/images/ex.jpg',
+        position: 'Instructor',
+        start: 'Dic 2019',
+        end: 'actualidad'
+    }
+];
+
 var projects = [
     {
         name: 'Proyecto 1',
@@ -31,15 +41,6 @@ var projects = [
     }
 ];
 
-var experiences = [
-    {
-        company: 'Academia Desafío Latam',
-        logo: 'assets/images/ex.jpg',
-        position: 'Docente',
-        start: 'Dic 2019',
-        end: 'actualidad'
-    }
-]
 
 var cardDeck = document.getElementById('card-deck');
 var projectSection = document.getElementById('projects');

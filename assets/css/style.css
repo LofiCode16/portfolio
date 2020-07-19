@@ -286,9 +286,9 @@ footer{
 }
 
 footer div{
-    width: 50%;
+    width: 40%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 footer div a{
@@ -391,6 +391,10 @@ footer div i.fa{
 
   #experiences article {
     flex-direction: column;
+  }
+
+  footer div{
+    width: 50%;
   }
 }
 
