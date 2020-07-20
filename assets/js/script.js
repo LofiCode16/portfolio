@@ -10,34 +10,10 @@ var experiences = [
 
 var projects = [
     {
-        name: 'Proyecto 1',
-        desc: 'Este es el proyecto uno',
-        image: 'assets/images/ex.jpg',
-        url: 'https://www.github.com'
-    },
-    {
-        name: 'Proyecto 2',
-        desc: 'Este es el proyecto dos',
-        image: 'assets/images/ex.jpg',
-        url: 'https://www.github.com'
-    },
-    {
-        name: 'Proyecto 3',
-        desc: 'Este es el proyecto tres',
-        image: 'assets/images/ex.jpg',
-        url: 'https://www.github.com'
-    },
-    {
-        name: 'Proyecto 4',
-        desc: 'Este es el proyecto cuatro',
-        image: 'assets/images/ex.jpg',
-        url: 'https://www.github.com'
-    },
-    {
-        name: 'Proyecto 5',
-        desc: 'Este es el proyecto cinco',
-        image: 'assets/images/ex.jpg',
-        url: 'https://www.github.com'
+        name: 'Este portfolio!',
+        desc: 'He creado este portfolio usando los elementos mas básicos de la web (HTML, CSS y JS) usando elementos variados, echale un vistazo!',
+        image: 'assets/images/portfolio.png',
+        url: 'https://github.com/diegoski007/portfolio'
     }
 ];
 
