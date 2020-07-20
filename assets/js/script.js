@@ -11,7 +11,7 @@ var experiences = [
 var projects = [
     {
         name: 'Este portfolio!',
-        desc: 'He creado este portfolio usando los elementos mas básicos de la web (HTML, CSS y JS) usando elementos variados, echale un vistazo!',
+        desc: 'He creado este portfolio usando los componentes mas básicos de la web (HTML, CSS y JS) usando elementos variados, echale un vistazo!',
         image: 'assets/images/portfolio.png',
         url: 'https://github.com/diegoski007/portfolio'
     }
