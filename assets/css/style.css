@@ -5,13 +5,21 @@ html{
 }
 
 body {
-  background-image: url(../images/bg-main.jpg);
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/755/152/852/milky-way-stars-mountains-night-wallpaper-preview.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
 }
+
+h1, h2, h3, h4, h5, #logo{
+  font-family: "Rubik", sans-serif; 
+}
+
+p, span, ul, a {
+font-family: "Source Sans Pro", sans-serif;
+} 
 
 /* Navbar */
 nav {
@@ -28,6 +36,9 @@ nav {
 #logo{
   text-decoration: none;
   color: white;
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 40px;
 }
 
 nav div {
@@ -89,6 +100,7 @@ nav div {
 .about h2 {
   text-align: center;
   padding-top: 20px;
+  color: darkslategray;
 }
 
 .about hr {
@@ -123,6 +135,10 @@ nav div {
   display: inline-block;
   width: 40%;
   margin: 3%;
+}
+
+.aptitudes ul {
+  list-style: circle outside url('../images/ok-16.png');
 }
 
 .about article div h2 {
@@ -265,10 +281,12 @@ nav div {
 
 .projects article div h4 {
   text-align: center;
+  color: darkslategray;
 }
 
 .projects article div p {
   margin: 20px;
+  color: darkslategray;
 }
 
 .projects article div div {
@@ -329,6 +347,10 @@ footer div i.fa{
     font-size: 64px;
 }
 
+footer h3{
+  font-size: 25px;
+}
+
 /* Puntos de quiebre */
 @media screen and (max-width: 600px) {
   nav {
@@ -347,7 +369,7 @@ footer div i.fa{
     width: 0;
     z-index: 2;
     right: 0;
-    top: 50px;
+    top: 60px;
     height: 100vh;
     background-color: rgba(10, 4, 4, 0.7);
     backdrop-filter: saturate(180%) blur(30px);
@@ -443,8 +465,8 @@ footer div i.fa{
     height: 60px;
   }
 
-  #experiences{
-    scroll-margin-top: 70px;
+  #experiences, #contact{
+    scroll-margin-top: 80px;
   }
 
   .projects article {
@@ -470,10 +492,6 @@ footer div i.fa{
 
   #experiences article {
     flex-direction: column;
-  }
-
-  #contact{
-    scroll-margin-top: 60px;
   }
 
   footer div{
@@ -516,7 +534,7 @@ footer div i.fa{
   .aptitudes ul {
     margin: 5% 40% !important;
   }
-
+  
   .about article figure {
     width: auto;
   }

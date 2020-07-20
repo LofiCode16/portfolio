@@ -1,7 +1,7 @@
 var experiences = [
     {
         company: 'Academia Desafío Latam',
-        logo: 'assets/images/ex.jpg',
+        logo: 'https://i.vimeocdn.com/portrait/39547366_640x640',
         position: 'Instructor',
         start: 'Dic 2019',
         end: 'actualidad'
@@ -109,6 +109,7 @@ function createCaption(data){
     var duration = document.createTextNode(`${data.start} - ${data.end}`);
     
     img.src = data.logo;
+    p.style.fontWeight = '400';
     h3.append(company);
     h4.append(position);
     p.append(duration);

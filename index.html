@@ -1,139 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="diego soydiego portfolio portafolio diegoperez perez diegopr178 programador desarrollo web programadores bootstrap javascript css html">
-    <title>Mi portfolio</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="diego soydiego portfolio portafolio diegoperez perez diegopr178 programador desarrollo web programadores bootstrap javascript css html">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,700|Source+Sans+Pro:300,400&display=swap" rel="stylesheet"/>
+        <title>Soy Diego!</title>
+    </head>
+    <body>
+        <nav>
+            <div id="nav-items">
+                <a id="logo" href="#">D</a>
 
-    <nav>
-        <div id="nav-items">
-            <a id="logo" href="#"><p>Portfolio</p></a>
+                <div class="nav-links">
+                    <span onclick="showMenu()" id="open">&#9776;</span>
+                    <span onclick="hideMenu()" id="close">&times;</span>
+                    <a href="#about_me">Sobre mí</a>
+                    <a href="#experiences">Experiencias</a>
+                    <a href="#projects">Proyectos</a>
+                    <a href="#contact">Contacto</a>
+                </div>
 
-            <div class="nav-links">
-                <span onclick="showMenu()" id="open">&#9776;</span>
-                <span onclick="hideMenu()" id="close">&times;</span>
-                <a href="#about_me">Sobre mí</a>
-                <a href="#experiences">Experiencias</a>
-                <a href="#projects">Proyectos</a>
-                <a href="#contact">Contacto</a>
             </div>
+        </nav>
 
+        <div class="side-menu" id="side-menu" onclick="hideMenu()">
+            <a href="#about_me">Sobre mí</a>
+            <a href="#experiences">Experiencias</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#contact">Contacto</a>
         </div>
-    </nav>
+        
+        <main>
+            <section class="about" id="about_me">        
+                <h2>Sobre mí</h2>
+                <hr>
 
-    <div class="side-menu" id="side-menu" onclick="hideMenu()">
-        <a href="#about_me">Sobre mí</a>
-        <a href="#experiences">Experiencias</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#contact">Contacto</a>
-    </div>
-    
-    <main>
+                <article>
+                    <figure>
+                        <img src="assets/images/profile.jpg" alt="perfil">
+                        <p>Hola! Mi nombre es Diego, tengo 28 años y me encanta crear cosas nuevas y llevar a la práctica mis ideas a través de la programación. En mis tiempos libres me gusta estudiar Música, Astronomía o ir a pasear al campo. Me gustan las galletas, las motos y el color azul(por si no lo notaste jaja).</p>
+                    </figure>
+                    <div class="aptitudes">
+                        <h2>Mis aptitudes son: </h2>
+                        <ul>
+                            <li>Javascript</li>
+                            <li>Git</li>
+                            <li>Ruby</li>
+                        </ul>
+                    </div>
+                </article>
 
-        <section class="about" id="about_me">
-    
-            <h2>Sobre mí</h2>
-            <hr>
-            <article>
-                <figure>
-                    <img src="assets/images/profile.jpg" alt="perfil">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum quae numquam veniam officia quo maiores ea eligendi dicta! Qui beatae accusamus iste. Obcaecati excepturi, consequatur ducimus tempora laborum incidunt beatae.</p>
-                </figure>
-                <div class="aptitudes">
-                    <h2>Mis aptitudes son: </h2>
-                    <ul>
-                        <li>Javascript</li>
-                        <li>Git</li>
-                        <li>Ruby</li>
-                    </ul>
+            </section>
+            
+            <section class="tools">
+                <h2>Herramientas que me gusta usar</h2>
+
+                <div class="carousel">
+
+                    <div class="slide" id="main-slide">
+                        <div id="element1">
+                            <img src="assets/images/ele1.png" alt="bootstrap" srcset="">
+                        </div>
+                        <div id="element2">
+                            <img src="assets/images/ele2.png" alt="materialize" srcset="">
+                        </div>
+                        <div id="element3">
+                            <img src="assets/images/ele3.png" alt="rails" srcset="">
+                        </div>
+                        <div id="element4">
+                            <img src="assets/images/ele4.png" alt="git" srcset="">
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div id="element5">
+                            <img src="assets/images/ele5.png" alt="github" srcset="">
+                        </div>
+                        <div id="element6">
+                            <img src="assets/images/ele6.png" alt="aws" srcset="">
+                        </div>
+                        <div id="element7">
+                            <img src="assets/images/ele7.png" alt="heroku" srcset="">
+                        </div>
+                        <div id="element8">
+                            <img src="assets/images/ele8.png" alt="react" srcset="">
+                        </div>
+                    </div>
+
                 </div>
-            </article>
+            </section>
 
-        </section>
-        
-        <section class="tools">
-            <h2>Herramientas que me gusta usar</h2>
+            <hr class="separator">
 
-            <div class="carousel">
+            <section id="experiences">
+                <!--Esta seccion está construida en su mayoría en JS-->
+                <h2>Mi experiencia</h2>
+            </section>
 
-                <div class="slide" id="main-slide">
-                    <div id="element1">
-                        <img src="assets/images/ele1.png" alt="bootstrap" srcset="">
-                    </div>
-                    <div id="element2">
-                        <img src="assets/images/ele2.png" alt="materialize" srcset="">
-                    </div>
-                    <div id="element3">
-                        <img src="assets/images/ele3.png" alt="rails" srcset="">
-                    </div>
-                    <div id="element4">
-                        <img src="assets/images/ele4.png" alt="git" srcset="">
-                    </div>
-                </div>
+            <hr class="separator">
 
-                <div class="slide">
-                    <div id="element5">
-                        <img src="assets/images/ele5.png" alt="github" srcset="">
-                    </div>
-                    <div id="element6">
-                        <img src="assets/images/ele6.png" alt="aws" srcset="">
-                    </div>
-                    <div id="element7">
-                        <img src="assets/images/ele7.png" alt="heroku" srcset="">
-                    </div>
-                    <div id="element8">
-                        <img src="assets/images/ele8.png" alt="react" srcset="">
-                    </div>
-                </div>
+            <section class="projects" id='projects' onclick="goToUrl(event)">
+                <!--Esta seccion está construida en su mayoría en JS-->
+                <!--Los links han sido manipulados a través de eventos-->
+                <h2>Algunos de mis proyectos</h2>            
+            </section>
 
-            </div>
-        </section>
+            <hr class="separator">
 
-        <hr class="separator">
+            <section id="contact">
+                <h2>Contacto</h2>                
+                <div class="typeform-widget" data-url="https://form.typeform.com/to/bAimJfDq"></div>
+            </section>
 
-        <section id="experiences">
-            <h2>Mi experiencia</h2>            
-        </section>
-
-        <hr class="separator">
-
-        <section class="projects" id='projects' onclick="goToUrl(event)">
-            <!--Esta seccion está construida en su mayoría en JS-->
-            <!--Los links han sido manipulados a través de eventos-->
-            <h2>Algunos de mis proyectos</h2>            
-        </section>
-
-        <hr class="separator">
-
-        <section id="contact">
-            <h2>Contacto</h2>
             
-            <div class="typeform-widget" data-url="https://form.typeform.com/to/bAimJfDq"></div>
-        </section>
-
-        
-        <footer>
+            <footer>                
+                <h3>¿Quieres saber más?</h3>
+                
+                <div>
+                    <a href="https://www.github.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>                
+            </footer>
             
-            <h3>¿Quieres saber más?</h3>
-            
-            <div>
-                <a href="https://www.github.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </div>
-            
-            <!-- iconos de instagram, github y linkedin-->
-        </footer>
-        
-    </main>
-        
+        </main>
         
         <script src="assets/js/script.js"></script>
-
     </body>
 </html>
