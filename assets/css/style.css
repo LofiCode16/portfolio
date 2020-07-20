@@ -363,6 +363,10 @@ footer h3{
     display: block;
   }
 
+  #open, #close{
+    color: white;
+  }
+
   .side-menu{
     display: block;
     position: fixed;
