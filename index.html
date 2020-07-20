@@ -10,18 +10,27 @@
 <body>
 
     <nav>
-        <div>
+        <div id="nav-items">
             <p>Portfolio</p>
 
-            <div>
-                <button>|||</button>
-                <a href="#">Sobre mí</a>
-                <a href="#">Experiencias</a>
-                <a href="#">Proyectos</a>
-                <a href="#">Contacto</a>
+            <div class="nav-links">
+                <span onclick="showMenu()" id="open">&#9776;</span>
+                <span onclick="hideMenu()" id="close">&times;</span>
+                <a href="#about_me">Sobre mí</a>
+                <a href="#experiences">Experiencias</a>
+                <a href="#projects">Proyectos</a>
+                <a href="#contact">Contacto</a>
             </div>
+
         </div>
     </nav>
+
+    <div class="side-menu" id="side-menu" onclick="hideMenu()">
+        <a href="#about_me">Sobre mí</a>
+        <a href="#experiences">Experiencias</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+    </div>
     
     <main>
 
@@ -106,24 +115,24 @@
             <div class="typeform-widget" data-url="https://form.typeform.com/to/bAimJfDq"></div>
         </section>
 
+        
+        <footer>
+            
+            <h3>¿Quieres saber más?</h3>
+            
+            <div>
+                <a href="https://www.github.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+            
+            <!-- iconos de instagram, github y linkedin-->
+        </footer>
+        
     </main>
-
-    <footer>
-
-        <h3>¿Quieres saber más?</h3>
-
-        <div>
-            <a href="https://www.github.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        </div>
-
-        <!-- iconos de instagram, github y linkedin-->
-    </footer>
-
-
-
-    <script src="assets/js/script.js"></script>
+        
+        
+        <script src="assets/js/script.js"></script>
 
     </body>
 </html>

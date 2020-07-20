@@ -71,6 +71,23 @@ groupProjects.forEach(function(projects){
     projectSection.appendChild(article);
 });
 
+var openMenu = document.getElementById('open');
+var closeMenu = document.getElementById('close');
+var sideMenu = document.getElementById('side-menu');
+
+closeMenu.style.display = 'none';
+
+function showMenu(){
+    openMenu.style.display = 'none';
+    closeMenu.style.display = 'block';
+    sideMenu.style.width = '50vw';
+}
+
+function hideMenu(){
+    openMenu.style.display = 'block';
+    closeMenu.style.display = 'none';
+    sideMenu.style.width = '0';
+}
 
 function groupBy(arr, n) {
     var group = [];

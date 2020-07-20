@@ -17,6 +17,7 @@ nav {
   /* backdrop-filter: blur(30px);  doesn't work in Firefox :c */
   background-color: rgba(10, 4, 4, 0.4);
   backdrop-filter: saturate(180%) blur(30px);
+  top: 0;
 }
 
 nav div {
@@ -27,27 +28,37 @@ nav div {
   align-items: center;
 }
 
-nav div div {
+.nav-links {
   width: 30vw;
   margin: 0;
   display: flex;
   justify-content: space-around;
 }
 
-nav div div a {
+.nav-links a {
   margin-left: 4%;
   width: auto;
   text-decoration: none;
+  color: gray;
+  transition: 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a:active{
   color: white;
 }
 
-nav div div button {
+.side-menu {
   display: none;
 }
 
 /* Sección principal */
-main {
-  padding-top: 20px;
+#about_me, #experiences, #contact{
+  scroll-margin-top: 100px;
+}
+
+#projects{
+  scroll-margin-top: 60px;
 }
 
 .about {
@@ -305,26 +316,72 @@ footer div i.fa{
   nav {
     position: fixed;
     width: 100vw;
+    z-index: 3;
   }
 
-  nav div div {
+  .nav-links #open{
+    display: block;
+  }
+
+  .side-menu{
+    display: block;
+    position: fixed;
+    width: 0;
+    z-index: 2;
+    right: 0;
+    top: 50px;
+    height: 100vh;
+    background-color: rgba(10, 4, 4, 0.7);
+    backdrop-filter: saturate(180%) blur(30px);
+    transition: 0.3s;
+  }
+
+  .side-menu a{
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    color: gray;
+    transition: 0.2s;
+    text-decoration: none;
+    margin: 30px 60px;
+  }
+
+  .side-menu a:hover,
+  .side-menu a:active{
+    color: white;
+  }
+
+  .nav-links {
     width: auto;
   }
 
-  nav div div a {
+  .nav-links a {
     display: none;
   }
 
-  nav div div button {
-    display: flex;
-    width: 40px;
-    height: 40px;
+  .nav-links span {
+    display: block;
+    width: 30px;
+    height: 30px;
     background-color: transparent;
-    border: 2px solid white;
-    border-radius: 10px;
-    font-size: 28px;
-    color: white;
+    font-size: 30px;
+    color: gray;
     text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .nav-links span:hover, 
+  .nav-links span:active{
+    color: white;
+  }
+
+  #close {
+    font-size: 30px;
+  }
+
+  main{
+    padding-top: 50px;
   }
 
   .about article div {
@@ -399,6 +456,11 @@ footer div i.fa{
 }
 
 @media screen and (min-width: 601px) and (max-width: 1000px) {
+
+  #open, #close{
+    display: none !important;
+  }
+
   .tools h2 {
     width: 30%;
   }
@@ -463,4 +525,12 @@ footer div i.fa{
     display: block;
     float: right;
   }
+}
+
+@media screen and (min-width: 1001px){
+  
+  #open, #close{
+    display: none !important;
+  }
+  
 }
