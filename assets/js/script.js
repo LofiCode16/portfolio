@@ -57,12 +57,14 @@ function showMenu(){
     openMenu.style.display = 'none';
     closeMenu.style.display = 'block';
     sideMenu.style.width = '50vw';
+    document.body.style.overflow = 'hidden';
 }
 
 function hideMenu(){
     openMenu.style.display = 'block';
     closeMenu.style.display = 'none';
     sideMenu.style.width = '0';
+    document.body.style.overflowY = 'scroll';
 }
 
 function groupBy(arr, n) {

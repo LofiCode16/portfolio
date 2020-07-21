@@ -378,6 +378,7 @@ footer h3{
     background-color: rgba(10, 4, 4, 0.7);
     backdrop-filter: saturate(180%) blur(30px);
     transition: 0.3s;
+    white-space: nowrap;
   }
 
   .side-menu a{
