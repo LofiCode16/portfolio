@@ -17,16 +17,22 @@ var projects = [
     }
 ];
 
+var d = document;
 
-var cardDeck = document.getElementById('card-deck');
-var projectSection = document.getElementById('projects');
-var experienceSection = document.getElementById('experiences');
+var cardDeck = d.getElementById('card-deck');
+var projectSection = d.getElementById('projects');
+var experienceSection = d.getElementById('experiences');
+var openMenu = d.getElementById('open');
+var closeMenu = d.getElementById('close');
+var sideMenu = d.getElementById('side-menu');
 
 var groupExperiences = groupBy(experiences, 3)
 var groupProjects = groupBy(projects, 3);
 
+closeMenu.style.display = 'none';
+
 groupExperiences.forEach(function(experiences){
-    var article = document.createElement('article');
+    var article = d.createElement('article');
     article.className = 'experiences__caption'
 
     experiences.forEach(function(experience){
@@ -38,7 +44,7 @@ groupExperiences.forEach(function(experiences){
 });
 
 groupProjects.forEach(function(projects){
-    var article = document.createElement('article');
+    var article = d.createElement('article');
     article.className = 'projects__card-deck'
 
     projects.forEach(function(project){
@@ -49,24 +55,19 @@ groupProjects.forEach(function(projects){
     projectSection.appendChild(article);
 });
 
-var openMenu = document.getElementById('open');
-var closeMenu = document.getElementById('close');
-var sideMenu = document.getElementById('side-menu');
-
-closeMenu.style.display = 'none';
 
 function showMenu(){
     openMenu.style.display = 'none';
     closeMenu.style.display = 'block';
     sideMenu.style.width = '50vw';
-    document.body.style.overflow = 'hidden';
+    d.body.style.overflow = 'hidden';
 }
 
 function hideMenu(){
     openMenu.style.display = 'block';
     closeMenu.style.display = 'none';
     sideMenu.style.width = '0';
-    document.body.style.overflowY = 'scroll';
+    d.body.style.overflowY = 'scroll';
 }
 
 function groupBy(arr, n) {
@@ -77,16 +78,16 @@ function groupBy(arr, n) {
 };
 
 function createCaption(data){
-    var div = document.createElement('div');
-    var figure = document.createElement('figure');
-    var img = document.createElement('img');
-    var h3 = document.createElement('h3');
-    var h4 = document.createElement('h4');
-    var p = document.createElement('p');
+    var div = d.createElement('div');
+    var figure = d.createElement('figure');
+    var img = d.createElement('img');
+    var h3 = d.createElement('h3');
+    var h4 = d.createElement('h4');
+    var p = d.createElement('p');
 
-    var company = document.createTextNode(data.company);
-    var position = document.createTextNode(data.position);
-    var duration = document.createTextNode(`${data.start} - ${data.end}`);
+    var company = d.createTextNode(data.company);
+    var position = d.createTextNode(data.position);
+    var duration = d.createTextNode(`${data.start} - ${data.end}`);
     
     img.src = data.logo;
     p.style.fontWeight = '400';
@@ -108,17 +109,17 @@ function createCaption(data){
 
 function createCard(data){
 
-    var div = document.createElement('div');
-    var figure = document.createElement('figure');
-    var img = document.createElement('img');
-    var h4 = document.createElement('h4');
-    var p = document.createElement('p');
-    var divButton = document.createElement('div');
-    var button = document.createElement('button');
+    var div = d.createElement('div');
+    var figure = d.createElement('figure');
+    var img = d.createElement('img');
+    var h4 = d.createElement('h4');
+    var p = d.createElement('p');
+    var divButton = d.createElement('div');
+    var button = d.createElement('button');
     
-    var title = document.createTextNode(data.name);
-    var desc = document.createTextNode(data.desc);
-    var textButton = document.createTextNode('Ir a Github');
+    var title = d.createTextNode(data.name);
+    var desc = d.createTextNode(data.desc);
+    var textButton = d.createTextNode('Ir a Github');
     
     img.src = data.image;
     div.className = 'projects__card-deck__card'
@@ -159,7 +160,7 @@ function goToUrl(event){
 
 // TypeForm
 (function() { 
-    var qs,js,q,s,d=document, 
+    var qs,js,q,s, 
     gi=d.getElementById, 
     ce=d.createElement, 
     gt=d.getElementsByTagName, 
@@ -173,55 +174,3 @@ function goToUrl(event){
         q.parentNode.insertBefore(js,q) 
     } 
 })();
-
-
-{/* <div>
-    <figure>
-    <img src="assets/images/ex.jpg" alt="" srcset="">
-    </figure>
-    <h4>titulo proyecto</h4>
-    <p>descripcion del proyecto</p>
-    <button>ir al repo</button>
-</div> */}
-
-
-// intervalo para el carousel
-// window.setInterval(changeSlide, 5000);
-    
-    // function changeSlide(){
-    //     var slide = document.getElementsByClassName('slide');
-        
-    //     if(slide[0].style.display == 'none'){
-    //         fadeOut(slide[1]);
-    //         fadeIn(slide[0]);
-    //     } else {
-    //         fadeOut(slide[0]);
-    //         fadeIn(slide[1]);
-    //     }    
-    // }
-    
-    // function fadeOut(element) {
-    //     var op = 1; 
-    //     var timer = setInterval(function () {
-    //         if (op <= 0.1){
-    //             clearInterval(timer);
-    //             element.style.display = 'none';
-    //         }
-    //         element.style.opacity = op;
-    //         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-    //         op -= op * 0.1;
-    //     }, 30);
-    // }
-    
-    // function fadeIn(element) {
-    //     var op = 0.1;
-    //     var timer = setInterval(function () {
-    //         if (op >= 1){
-    //             clearInterval(timer);
-    //             element.style.display = 'flex';
-    //         }
-    //         element.style.opacity = op;
-    //         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-    //         op += op * 0.1;
-    //     }, 30);
-    // }
