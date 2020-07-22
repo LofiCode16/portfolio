@@ -27,6 +27,7 @@ var groupProjects = groupBy(projects, 3);
 
 groupExperiences.forEach(function(experiences){
     var article = document.createElement('article');
+    article.className = 'experiences__caption'
 
     experiences.forEach(function(experience){
         var caption = createCaption(experience);
@@ -38,6 +39,7 @@ groupExperiences.forEach(function(experiences){
 
 groupProjects.forEach(function(projects){
     var article = document.createElement('article');
+    article.className = 'projects__card-deck'
 
     projects.forEach(function(project){
         var card = createCard(project);
@@ -88,6 +90,8 @@ function createCaption(data){
     
     img.src = data.logo;
     p.style.fontWeight = '400';
+    div.className = 'experiences__caption__info'
+    figure.className = 'experiences__caption__info__image'
     h3.append(company);
     h4.append(position);
     p.append(duration);
@@ -117,10 +121,12 @@ function createCard(data){
     var textButton = document.createTextNode('Ir a Github');
     
     img.src = data.image;
+    div.className = 'projects__card-deck__card'
+    figure.className = 'projects__card-deck__card__image'
+    divButton.className = 'projects__card-deck__card__button'
     h4.append(title);
     p.append(desc);
     button.append(textButton);
-    div.className = 'card'
     img.dataset.url = data.url;
     button.dataset.url = data.url;
     

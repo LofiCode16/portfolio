@@ -12,11 +12,11 @@
         <title>Soy Diego!</title>
     </head>
     <body>
-        <nav>
-            <div id="nav-items">
-                <a id="logo" href="#">D</a>
+        <nav class="navbar">
+            <div class="navbar__item" id="nav-items">
+                <a class="navbar__item__logo" id="logo" href="#">D</a>
 
-                <div class="nav-links">
+                <div class="navbar__item__links">
                     <span onclick="showMenu()" id="open">&#9776;</span>
                     <span onclick="hideMenu()" id="close">&times;</span>
                     <a href="#about_me">Sobre mí</a>
@@ -40,12 +40,12 @@
                 <h2>Sobre mí</h2>
                 <hr>
 
-                <article>
-                    <figure>
+                <article class="about__info">
+                    <figure class="about__info__image">
                         <img src="assets/images/profile.jpg" alt="perfil">
                         <p>Hola! Mi nombre es Diego, tengo 28 años y me encanta crear cosas nuevas y llevar a la práctica mis ideas a través de la programación. En mis tiempos libres me gusta estudiar Música, Astronomía o ir a pasear al campo. Me gustan las galletas, las motos y el color azul(por si no lo notaste jaja).</p>
                     </figure>
-                    <div class="aptitudes">
+                    <div class="about__info__aptitudes">
                         <h2>Mis aptitudes son: </h2>
                         <ul>
                             <li>Javascript</li>
@@ -60,9 +60,9 @@
             <section class="tools">
                 <h2>Herramientas que me gusta usar</h2>
 
-                <div class="carousel">
+                <div class="tools__carousel">
 
-                    <div class="slide" id="main-slide">
+                    <div class="tools__carousel__slide" id="main-slide">
                         <div id="element1">
                             <img src="assets/images/ele1.png" alt="bootstrap" srcset="">
                         </div>
@@ -77,7 +77,7 @@
                         </div>
                     </div>
 
-                    <div class="slide">
+                    <div class="tools__carousel__slide">
                         <div id="element5">
                             <img src="assets/images/ele5.png" alt="github" srcset="">
                         </div>
@@ -97,7 +97,7 @@
 
             <hr class="separator">
 
-            <section id="experiences">
+            <section id="experiences" class="experiences">
                 <!--Esta seccion está construida en su mayoría en JS-->
                 <h2>Mi experiencia</h2>
             </section>
@@ -118,10 +118,10 @@
             </section>
 
             
-            <footer>                
+            <footer class="footer">                
                 <h3>¿Quieres saber más?</h3>
                 
-                <div>
+                <div class="footer__icons">
                     <a href="https://github.com/diegoski007" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
                     <a href="https://www.linkedin.com/in/diego-perez-g/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     <a href="https://www.instagram.com/diegoooski/?hl=es-la" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" aria-hidden="true"></i></a>

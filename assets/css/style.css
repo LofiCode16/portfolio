@@ -13,7 +13,7 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, #logo{
+h1, h2, h3, h4, h5, .navbar__item__logo {
   font-family: "Rubik", sans-serif; 
 }
 
@@ -22,7 +22,7 @@ font-family: "Source Sans Pro", sans-serif;
 } 
 
 /* Navbar */
-nav {
+.navbar {
   position: fixed;
   z-index: 2;
   width: 100vw;
@@ -33,7 +33,7 @@ nav {
   top: 0;
 }
 
-#logo{
+.navbar__item__logo {
   text-decoration: none;
   color: white;
   margin: 10px 0;
@@ -41,7 +41,7 @@ nav {
   font-size: 40px;
 }
 
-nav div {
+.navbar__item {
   display: flex;
   margin: 0 10%;
   color: white;
@@ -49,14 +49,14 @@ nav div {
   align-items: center;
 }
 
-.nav-links {
+.navbar__item__links {
   width: 30vw;
   margin: 0;
   display: flex;
   justify-content: space-around;
 }
 
-.nav-links a {
+.navbar__item__links a {
   margin-left: 4%;
   width: auto;
   text-decoration: none;
@@ -64,8 +64,8 @@ nav div {
   transition: 0.2s;
 }
 
-.nav-links a:hover,
-.nav-links a:active{
+.navbar__item__links a:hover,
+.navbar__item__links a:active{
   color: white;
 }
 
@@ -78,7 +78,7 @@ nav div {
   scroll-margin-top: 100px;
 }
 
-#experiences{
+.experiences{
   scroll-margin-top: 120px;
 }
 
@@ -108,17 +108,17 @@ nav div {
   color: gray;
 }
 
-.about article {
+.about__info {
   display: flex;
   justify-content: space-between;
 }
 
-.about article figure {
+.about__info__image {
   display: flex;
   width: 60%;
 }
 
-.about article figure img {
+.about__info__image img {
   display: inline-block;
   width: 200px;
   height: 200px;
@@ -126,22 +126,22 @@ nav div {
   margin: 3%;
 }
 
-.about article figure p {
+.about__info__image p {
   display: inline-block;
   width: 50%;
 }
 
-.about article div {
+.about__info div {
   display: inline-block;
   width: 40%;
   margin: 3%;
 }
 
-.aptitudes ul {
+.about__info__aptitudes ul {
   list-style: circle outside url('../images/ok-16.png');
 }
 
-.about article div h2 {
+.about__info div h2 {
   padding: 0;
   margin: 0;
 }
@@ -155,32 +155,32 @@ nav div {
 }
 
 .tools h2,
-.carousel, footer {
+.tools__carousel, .footer {
   display: flex;
   color: white;
 }
 
-.carousel {
+.tools__carousel {
   width: 60%;
   padding-bottom: 7%;
 }
 
-.carousel .slide {
+.tools__carousel__slide {
   display: flex;
   position: absolute;
 }
 
-.slide {
+.tools__carousel__slide {
   width: 48%;
   display: flex;
   justify-content: space-between;
 }
 
-.slide div {
+.tools__carousel__slide div {
   display: flex;
 }
 
-.slide div img {
+.tools__carousel__slide div img {
   width: 120px;
   height: 100px;
   border-radius: 5px;
@@ -215,20 +215,20 @@ nav div {
 }
 
 /* Experiencias */
-#experiences, #contact {
+.experiences, #contact {
   color: white;
   text-align: center;
   margin: 5% 10%;
 }
 
-#experiences article {
+.experiences__caption {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 5%;
 }
 
-#experiences article div figure img {
+.experiences__caption__info__image img {
   width: 150px;
   height: 150px;
   border-radius: 75px;
@@ -247,14 +247,14 @@ nav div {
   margin-bottom: 5%;
 }
 
-.projects article {
+.projects__card-deck {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 0 10%;
 }
 
-.projects article div.card {
+.projects__card-deck__card {
   width: 30%;
   background-color: white;
   opacity: 0.8;
@@ -265,31 +265,31 @@ nav div {
   cursor: pointer;
 }
 
-.projects article div:hover {
+.projects__card-deck__card:hover {
   transform: scale(1.1);
 }
 
-.projects article div figure {
+.projects__card-deck__card__image {
   margin: 0;
 }
 
-.projects article div figure img {
+.projects__card-deck__card__image img {
   width: 100%;
   height: 30%;
   border-radius: 10px 10px 0 0;
 }
 
-.projects article div h4 {
+.projects__card-deck__card h4 {
   text-align: center;
   color: darkslategray;
 }
 
-.projects article div p {
+.projects__card-deck__card p {
   margin: 20px;
   color: darkslategray;
 }
 
-.projects article div div {
+.projects__card-deck__card__button {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -297,7 +297,7 @@ nav div {
   padding-top: 10px;
 }
 
-.projects article div div button {
+.projects__card-deck__card__button button {
   display: none;
   width: 100px;
   height: 35px;
@@ -308,7 +308,7 @@ nav div {
   transition: transform 0.2s;
 }
 
-.projects article div div button:hover {
+.projects__card-deck__card__button button:hover {
   color: white;
   background-color: cornflowerblue;
   transform: scale(1.2);
@@ -323,7 +323,7 @@ nav div {
 }
 
 /* Footer */
-footer{
+.footer{
     padding: 5% 10%;
     justify-content: space-between;
     align-items: center;
@@ -332,34 +332,34 @@ footer{
   
 }
 
-footer div{
+.footer__icons{
     width: 40%;
     display: flex;
     justify-content: space-between;
 }
 
-footer div a{
+.footer__icons a{
     text-decoration: none;
     color: white;
 }
 
-footer div i.fa{
+.footer__icons a i.fa{
     font-size: 64px;
 }
 
-footer h3{
+.footer h3{
   font-size: 25px;
 }
 
 /* Puntos de quiebre */
 @media screen and (max-width: 600px) {
-  nav {
+  .navbar {
     position: fixed;
     width: 100vw;
     z-index: 3;
   }
 
-  .nav-links #open{
+  .navbar__item__links #open{
     display: block;
   }
 
@@ -396,15 +396,15 @@ footer h3{
     color: white;
   }
 
-  .nav-links {
+  .navbar__item__links {
     width: auto;
   }
 
-  .nav-links a {
+  .navbar__item__links a {
     display: none;
   }
 
-  .nav-links span {
+  .navbar__item__links span {
     display: block;
     width: 30px;
     height: 30px;
@@ -415,8 +415,8 @@ footer h3{
     transition: 0.2s;
   }
 
-  .nav-links span:hover, 
-  .nav-links span:active{
+  .navbar__item__links span:hover, 
+  .navbar__item__links span:active{
     color: white;
   }
 
@@ -428,26 +428,26 @@ footer h3{
     padding-top: 50px;
   }
 
-  .about article div {
+  .about__info div {
     width: auto;
   }
 
-  .about article figure {
+  .about__info__image {
     display: block;
     width: auto;
   }
 
-  .about article figure img {
+  .about__info__image img {
     width: 100%;
     height: 100%;
   }
 
-  .about article figure p {
+  .about__info__image p {
     text-align: center;
     width: 100%;
   }
 
-  .carousel {
+  .tools__carousel {
     margin: 10% 0;
     width: 100%;
   }
@@ -460,49 +460,49 @@ footer h3{
     text-align: center;
   }
 
-  .slide {
+  .tools__carousel__slide {
     width: 80%;
   }
 
-  .slide div img {
+  .tools__carousel__slide div img {
     width: 70px;
     height: 60px;
   }
 
-  #experiences, #contact{
+  .experiences, #contact{
     scroll-margin-top: 80px;
   }
 
-  .projects article {
+  .projects__card-deck {
     flex-direction: column;
   }
 
-  .projects article div {
+  .projects__card-deck__card {
     width: 100%;
   }
 
-  .projects article div div button {
+  .projects__card-deck__card__button button {
     display: inline-block;
     cursor: pointer;
   }
 
-  .projects article div.card {
+  .projects__card-deck__card.card {
     width: 90%;
   }
 
-  .projects article div:hover {
+  .projects__card-deck__card:hover {
     transform: none;
   }
 
-  #experiences article {
+  .experiences__caption {
     flex-direction: column;
   }
 
-  footer div{
+  .footer__icons{
     width: 50%;
   }
 
-  footer div i.fa{
+  .footer__icons i.fa{
     font-size: 40px;
   }
 }
@@ -517,63 +517,63 @@ footer h3{
     width: 30%;
   }
 
-  .slide {
+  .tools__carousel__slide {
     width: 53%;
   }
 
-  .carousel {
+  .tools__carousel {
     width: 70%;
     margin-left: 5%;
   }
 
-  .slide div img {
+  .tools__carousel__slide div img {
     width: 80px;
     height: 70px;
   }
 
-  .aptitudes {
+  .about__info__aptitudes {
     width: auto !important;
   }
 
-  .aptitudes ul {
+  .about__info__aptitudes ul {
     margin: 5% 40% !important;
   }
   
-  .about article figure {
+  .about__info__image {
     width: auto;
   }
 
-  .about article figure img {
+  .about__info__image img {
     margin: 0 30%;
   }
 
-  #experiences article div{
+  .experiences__caption__info{
       width: 30%;
   }
 
-  #experiences article div figure img{
+  .experiences__caption__info__image img{
       width: 120px;
       height: 120px;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .about article {
+  .about__info {
     display: flex;
     flex-direction: column;
   }
 
-  .about article figure {
+  .about__info__image {
     display: block;
     width: auto;
   }
 
-  .about article figure p {
+  .about__info__image p {
     display: block;
     width: 100%;
   }
 
-  .about article div {
+  .about__info div {
     display: block;
     float: right;
   }
