@@ -18,8 +18,12 @@ h1, h2, h3, h4, h5, .navbar__item__logo {
 }
 
 p, span, ul, a {
-font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 } 
+
+.separator {
+  margin: 0 10%;
+}
 
 /* Navbar */
 .navbar {
@@ -33,20 +37,19 @@ font-family: "Source Sans Pro", sans-serif;
   top: 0;
 }
 
+.navbar__item {
+  display: flex;
+  margin: 0 10%;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .navbar__item__logo {
   text-decoration: none;
   color: white;
   margin: 10px 0;
   font-weight: 700;
   font-size: 40px;
-}
-
-.navbar__item {
-  display: flex;
-  margin: 0 10%;
-  color: white;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .navbar__item__links {
@@ -74,23 +77,8 @@ font-family: "Source Sans Pro", sans-serif;
 }
 
 /* Sección principal */
-#about_me {
-  scroll-margin-top: 100px;
-}
-
-.experiences{
-  scroll-margin-top: 120px;
-}
-
-#projects{
-  scroll-margin-top: 45px;
-}
-
-#contact{
-  scroll-margin-top: 120px;
-}
-
 .about {
+  scroll-margin-top: 100px;
   margin: 10%;
   background-color: white;
   border-radius: 5px;
@@ -131,7 +119,7 @@ font-family: "Source Sans Pro", sans-serif;
   width: 50%;
 }
 
-.about__info div {
+.about__info__aptitudes {
   display: inline-block;
   width: 40%;
   margin: 3%;
@@ -141,7 +129,7 @@ font-family: "Source Sans Pro", sans-serif;
   list-style: circle outside url('../images/ok-16.png');
 }
 
-.about__info div h2 {
+.about__info__aptitudes h2 {
   padding: 0;
   margin: 0;
 }
@@ -166,13 +154,9 @@ font-family: "Source Sans Pro", sans-serif;
 }
 
 .tools__carousel__slide {
-  display: flex;
-  position: absolute;
-}
-
-.tools__carousel__slide {
   width: 48%;
   display: flex;
+  position: absolute;
   justify-content: space-between;
 }
 
@@ -186,8 +170,13 @@ font-family: "Source Sans Pro", sans-serif;
   border-radius: 5px;
 }
 
-.separator {
-  margin: 0 10%;
+#main-slide {
+  z-index: 1;
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate;
 }
 
 @keyframes cf3FadeInOut {
@@ -205,17 +194,9 @@ font-family: "Source Sans Pro", sans-serif;
   }
 }
 
-#main-slide {
-  z-index: 1;
-  animation-name: cf3FadeInOut;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
-  animation-direction: alternate;
-}
-
 /* Experiencias */
 .experiences, #contact {
+  scroll-margin-top: 120px;
   color: white;
   text-align: center;
   margin: 5% 10%;
@@ -236,6 +217,7 @@ font-family: "Source Sans Pro", sans-serif;
 
 /* Proyectos */
 .projects {
+  scroll-margin-top: 45px;
   padding: 5% 0;
   background-color: rgba(10, 4, 4, 0.4);
   backdrop-filter: saturate(180%) blur(30px);
@@ -269,16 +251,6 @@ font-family: "Source Sans Pro", sans-serif;
   transform: scale(1.1);
 }
 
-.projects__card-deck__card__image {
-  margin: 0;
-}
-
-.projects__card-deck__card__image img {
-  width: 100%;
-  height: 30%;
-  border-radius: 10px 10px 0 0;
-}
-
 .projects__card-deck__card h4 {
   text-align: center;
   color: darkslategray;
@@ -287,6 +259,16 @@ font-family: "Source Sans Pro", sans-serif;
 .projects__card-deck__card p {
   margin: 20px;
   color: darkslategray;
+}
+
+.projects__card-deck__card__image {
+  margin: 0;
+}
+
+.projects__card-deck__card__image img {
+  width: 100%;
+  height: 30%;
+  border-radius: 10px 10px 0 0;
 }
 
 .projects__card-deck__card__button {
@@ -344,7 +326,7 @@ font-family: "Source Sans Pro", sans-serif;
 }
 
 .footer__icons a i.fa{
-    font-size: 64px;
+  font-size: 64px;
 }
 
 .footer h3{
@@ -358,9 +340,13 @@ font-family: "Source Sans Pro", sans-serif;
     width: 100vw;
     z-index: 3;
   }
-
-  .navbar__item__links #open{
+  
+  #open{
     display: block;
+  }
+  
+  #close {
+    font-size: 30px;
   }
 
   #open, #close{
@@ -420,15 +406,11 @@ font-family: "Source Sans Pro", sans-serif;
     color: white;
   }
 
-  #close {
-    font-size: 30px;
-  }
-
   main{
     padding-top: 50px;
   }
 
-  .about__info div {
+  .about__info__aptitudes {
     width: auto;
   }
 
@@ -446,31 +428,35 @@ font-family: "Source Sans Pro", sans-serif;
     text-align: center;
     width: 100%;
   }
-
+  
+  .tools {
+    flex-direction: column;
+  }
+  
+  .tools h2 {
+    text-align: center;
+  }
+  
   .tools__carousel {
     margin: 10% 0;
     width: 100%;
   }
-
-  .tools {
-    flex-direction: column;
-  }
-
-  .tools h2 {
-    text-align: center;
-  }
-
+  
   .tools__carousel__slide {
     width: 80%;
   }
-
+  
   .tools__carousel__slide div img {
     width: 70px;
     height: 60px;
   }
-
+  
   .experiences, #contact{
     scroll-margin-top: 80px;
+  }
+  
+  .experiences__caption {
+    flex-direction: column;
   }
 
   .projects__card-deck {
@@ -494,10 +480,6 @@ font-family: "Source Sans Pro", sans-serif;
     transform: none;
   }
 
-  .experiences__caption {
-    flex-direction: column;
-  }
-
   .footer__icons{
     width: 50%;
   }
@@ -517,13 +499,13 @@ font-family: "Source Sans Pro", sans-serif;
     width: 30%;
   }
 
-  .tools__carousel__slide {
-    width: 53%;
-  }
-
   .tools__carousel {
     width: 70%;
     margin-left: 5%;
+  }
+  
+  .tools__carousel__slide {
+    width: 53%;
   }
 
   .tools__carousel__slide div img {
@@ -573,14 +555,13 @@ font-family: "Source Sans Pro", sans-serif;
     width: 100%;
   }
 
-  .about__info div {
+  .about__info__aptitudes {
     display: block;
     float: right;
   }
 }
 
 @media screen and (min-width: 1001px){
-  
   #open, #close{
     display: none !important;
   }
