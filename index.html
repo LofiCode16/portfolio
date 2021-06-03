@@ -6,130 +6,61 @@
         <meta name="keywords" content="diego, soydiego, portfolio, portafolio, diegoperez, perez, diegopr178, programador, desarrollo web, programadores, bootstrap, javascript, css, html">
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="shortcut icon" href="./assets/images/logo.png" />
+        <link 
+            rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+            crossorigin="anonymous"
+            >
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Rubik:300,700|Source+Sans+Pro:300,400&display=swap" rel="stylesheet"/>
         <title>Soy Diego!</title>
     </head>
     <body>
-        <nav class="navbar">
-            <div class="navbar__item" id="nav-items">
-                <a class="navbar__item__logo" id="logo" href="#">D</a>
-
-                <div class="navbar__item__links">
-                    <span onclick="showMenu()" id="open">&#9776;</span>
-                    <span onclick="hideMenu()" id="close">&times;</span>
-                    <a href="#about_me">Sobre mí</a>
-                    <a href="#experiences">Experiencias</a>
-                    <a href="#projects">Proyectos</a>
-                    <a href="#contact">Contacto</a>
+        
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">D</a>
+                <button class="navbar-toggler" type="button" id="sideMenu" data-show='false'>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id='sideNav'>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Proyectos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">FrontEnd</a>
+                                <a class="dropdown-item" href="#">BackEnd</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-
             </div>
         </nav>
+            
+        <div class="main">
+            <div>
+                <span>tituloaaaaaaaaaaaa</span>
 
-        <div class="side-menu" id="side-menu" onclick="hideMenu()">
-            <a href="#about_me">Sobre mí</a>
-            <a href="#experiences">Experiencias</a>
-            <a href="#projects">Proyectos</a>
-            <a href="#contact">Contacto</a>
+            </div>
         </div>
         
-        <main>
-            <section class="about" id="about_me">        
-                <h2>Sobre mí</h2>
-                <hr>
-
-                <article class="about__info">
-                    <figure class="about__info__image">
-                        <img src="assets/images/profile.jpg" alt="perfil">
-                        <p>Hola! Mi nombre es Diego, tengo 28 años y me encanta crear cosas nuevas y llevar a la práctica mis ideas a través de la programación. En mis tiempos libres me gusta estudiar Música, Astronomía o ir a pasear al campo. Me gustan las galletas, las motos y el color azul(por si no lo notaste jaja).</p>
-                    </figure>
-                    <div class="about__info__aptitudes">
-                        <h2>Mis aptitudes son: </h2>
-                        <ul>
-                            <li>Javascript</li>
-                            <li>Git</li>
-                            <li>Ruby</li>
-                        </ul>
-                    </div>
-                </article>
-
-            </section>
-            
-            <section class="tools">
-                <h2>Herramientas que me gusta usar</h2>
-
-                <div class="tools__carousel">
-
-                    <div class="tools__carousel__slide" id="main-slide">
-                        <div id="element1">
-                            <img src="assets/images/ele1.png" alt="bootstrap" srcset="">
-                        </div>
-                        <div id="element2">
-                            <img src="assets/images/ele2.png" alt="materialize" srcset="">
-                        </div>
-                        <div id="element3">
-                            <img src="assets/images/ele3.png" alt="rails" srcset="">
-                        </div>
-                        <div id="element4">
-                            <img src="assets/images/ele4.png" alt="git" srcset="">
-                        </div>
-                    </div>
-
-                    <div class="tools__carousel__slide">
-                        <div id="element5">
-                            <img src="assets/images/ele5.png" alt="github" srcset="">
-                        </div>
-                        <div id="element6">
-                            <img src="assets/images/ele6.png" alt="aws" srcset="">
-                        </div>
-                        <div id="element7">
-                            <img src="assets/images/ele7.png" alt="heroku" srcset="">
-                        </div>
-                        <div id="element8">
-                            <img src="assets/images/ele8.png" alt="react" srcset="">
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <hr class="separator">
-
-            <section id="experiences" class="experiences">
-                <!--Esta seccion está construida en su mayoría en JS-->
-                <h2>Mi experiencia</h2>
-            </section>
-
-            <hr class="separator">
-
-            <section class="projects" id='projects' onclick="goToUrl(event)">
-                <!--Esta seccion está construida en su mayoría en JS-->
-                <!--Los links han sido manipulados a través de eventos-->
-                <h2>Algunos de mis proyectos</h2>            
-            </section>
-
-            <hr class="separator">
-
-            <section id="contact">
-                <h2>Contacto</h2>                
-                <div class="typeform-widget" data-url="https://form.typeform.com/to/bAimJfDq"></div>
-            </section>
-
-            
-            <footer class="footer">                
-                <h3>¿Quieres saber más?</h3>
-                
-                <div class="footer__icons">
-                    <a href="https://github.com/diegoski007" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
-                    <a href="https://www.linkedin.com/in/diego-perez-g/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    <a href="https://www.instagram.com/el_rincon_de_la_web/?hl=es-la" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                </div>                
-            </footer>
-            
-        </main>
         
+        
+        
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"
+            >
+        </script>       
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
         <script src="assets/js/script.js"></script>
     </body>
 </html>
