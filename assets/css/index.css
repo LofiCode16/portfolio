@@ -20,11 +20,58 @@
   color: var(--contrast-light);
 }
 
+.main {
+  padding-top: 56px;
+}
+
+main section.hero,
+main div.container {
+  display: none;
+}
+
+footer {
+  display: none;
+  background-color: var(--main);
+  color: var(--contrast-light);
+}
+
+.front-list, .back-list {
+  list-style: none;
+  padding: 0;
+}
+
+.front-list li a, 
+.back-list li a {
+  color: var(--contrast-light);
+}
+
+.front-list li a:hover,
+.front-list li a:focus,
+.back-list li a:hover,
+.back-list li a:focus{
+  color: white;
+  text-decoration: none;
+}
+
+.icons__github, .icons__linkedin {
+  width: 64px;
+  height: 64px;
+  background-color: white;
+}
+
 
 @media screen and (max-width: 540px) {
 
-  .navbar-nav{
+  .navbar-nav,
+  .navbar-nav section {
     padding: 20px 40px;
+  }
+
+  .navbar-collapse section {
+    position: absolute;
+    top: 70vh;
+    right: 5%;
+    left: 5%;
   }
 
   #sideNav {
@@ -41,6 +88,14 @@
     transition: 0.5s;
   }
 
+  .fade-menu {
+    filter: brightness(0.4);
+    transition: 0.5s;
+  }
+
+  .fade-body {
+    background-color: rgba(0,0,0,0.4);
+  }
 
   ul.navbar-nav {
     display: block;
@@ -49,7 +104,7 @@
   .dropdown-menu.show{
     display: block;
     margin: 0 -25%;
-    padding-left: 60px;
+    padding-left: 30px;
     background-color: var(--light);
   } 
 
