@@ -4,7 +4,7 @@ $(document).ready(function(){
         {
             name: 'Este front!',
             desc: 'He creado este portfolio usando los componentes mas básicos de la web (HTML, CSS y JS), ademas de algunos otros elementos variados, échale un vistazo!',
-            image: 'assets/images/portfolio.png',
+            image: 'assets/images/front.jpg',
             url: 'https://github.com/diegoski007/portfolio'
         }
 
@@ -14,7 +14,7 @@ $(document).ready(function(){
         {
             name: 'Este back!',
             desc: 'He creado este portfolio usando los componentes mas básicos de la web (HTML, CSS y JS), ademas de algunos otros elementos variados, échale un vistazo!',
-            image: 'assets/images/portfolio.png',
+            image: 'assets/images/back.jpg',
             url: 'https://github.com/diegoski007/portfolio'
         }
     ];
@@ -101,9 +101,9 @@ function createCard(data) {
     return `
     <div class="card my-5">
         <a href="${data.url}">
-            <img src="${data.image}" class="card-img-top" alt="...">
-            <h5 class="card-title">${data.name}</h5>
+            <img src="${data.image}" class="card-img-top" height="200px">
             <div class="card-body">
+            <h5 class="card-title">${data.name}</h5>
                 <p class="card-text">${data.desc}</p>
             </div>
         </a>
