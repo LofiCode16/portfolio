@@ -29,6 +29,25 @@ main div.container {
   display: none;
 }
 
+.projects {
+  display: none;
+}
+
+.card {
+  max-width: 30%;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.1)
+}
+
+.card a:hover,
+.card a:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 footer {
   display: none;
   background-color: var(--main);
@@ -110,6 +129,10 @@ footer {
 
   .dropdown-item {
     color: var(--contrast-light);
+  }
+
+  .card {
+    width: 100%;
   }
 
 }
