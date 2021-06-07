@@ -22,9 +22,31 @@ $(document).ready(function(){
     var location =  window.location.href
     var projectType = location.split('=')[1];
 
-    $('main .hero').fadeIn(500);
+    $('main .hero').fadeIn(500, function(){
+        $(this).css('display', 'flex');
+        if($(this).width() > 779) {
+            $('.hero div').fadeIn();
+        }
+    });
     $('main .container').fadeIn(1500);
     $('footer').fadeIn(1500);
+
+    $(window).resize(function(){
+        if($(this).width() > 779) {
+            $('.hero div').fadeIn();
+        } else {
+            $('.hero div').fadeOut();
+        }
+
+    });
+
+    $('.front').hover(function(){
+        $('.hero').toggleClass('fade-background');
+    })
+
+    $('.back').hover(function(){
+        $('.hero').toggleClass('fade-background');
+    })
 
     switch(projectType){
         case 'front': 
