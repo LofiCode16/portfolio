@@ -63,7 +63,6 @@ main div.container {
   background-image: url('../images/colors.png');
 }
 
-
 .back:hover {
   background-image: url('../images/eng.png');
 }
@@ -78,6 +77,32 @@ main div.container {
   color: var(--contrast-light);
 }
 
+hr {
+  border-top: 5px solid rgba(0,0,0,0.1);
+}
+
+.about div figure,
+.experience div figure {
+  width: 100%;
+  height: 300px;
+} 
+
+.about,
+.experience {
+  color: var(--main);
+}
+
+.study img,
+.experience img {
+  width: 100%;
+  height: 90%;
+}
+
+.study figcaption,
+.experience figcaption {
+  font-size: 12px;
+}
+
 .projects {
   display: none;
 }
@@ -88,7 +113,7 @@ main div.container {
 }
 
 .card:hover {
-  transform: scale(1.1)
+  transform: scale(1.1);
 }
 
 .card a:hover,
@@ -99,6 +124,17 @@ main div.container {
 
 footer {
   display: none;
+  background-color: var(--main);
+  color: var(--contrast-light);
+}
+
+.front-list li:last-of-type a,
+.back-list li:last-of-type a {
+  color: var(--main);
+}
+
+.front-list li:last-of-type a:hover,
+.back-list li:last-of-type a:hover {
   background-color: var(--main);
   color: var(--contrast-light);
 }
@@ -116,21 +152,22 @@ footer {
 .front-list li a:hover,
 .front-list li a:focus,
 .back-list li a:hover,
-.back-list li a:focus{
+.back-list li a:focus,
+.icons a i:hover,
+.mail a:hover {
   color: white;
   text-decoration: none;
 }
 
 .icons__github, .icons__linkedin {
-  width: 64px;
-  height: 64px;
-  background-color: white;
+  font-size: 64px;
+  color: var(--contrast);
 }
 
 .fade-background {
   background-color: rgba(0,0,0,0.3);
   background-blend-mode: color;
-  transition: 0.5s
+  transition: 0.5s;
 }
 
 .fade-menu {
