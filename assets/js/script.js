@@ -2,8 +2,8 @@ $(document).ready(function(){
     
     var frontProjects = [
         {
-            name: 'React Ecommerce',
-            desc: 'Una pequeña tienda creada con React16, la cual cuenta con las acciones básicas y datos extraídos de una BD creada con un servidor REST falso',
+            name: 'El rincon de lo rico',
+            desc: 'Una pequeña tienda creada con React16, la cual cuenta con las acciones básicas y datos extraídos de una BD creada con un servidor REST falso.',
             image: 'assets/images/ecommerce.JPG',
             url: 'https://trusting-easley-4571b0.netlify.app/'
         }
