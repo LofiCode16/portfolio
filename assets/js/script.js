@@ -17,10 +17,10 @@ $(document).ready(function(){
 
     var backProjects = [
         {
-            name: 'Este back!',
-            desc: 'He creado este portfolio usando los componentes mas básicos de la web (HTML, CSS y JS), ademas de algunos otros elementos variados, échale un vistazo!',
-            image: 'assets/images/back.jpg',
-            url: 'https://github.com/diegoski007/portfolio'
+            name: 'Instafotos',
+            desc: 'Red social inspirada en Instagram. Fue creada con el principal objetivo de nivelar a mis estudiantes (más detalles en GitHub). Está creada en Ruby on Rails y servida en Heroku.',
+            image: 'assets/images/instafotos.JPG',
+            url: 'https://instafotosapp.herokuapp.com/'
         }
     ];
 

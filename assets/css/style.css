@@ -182,6 +182,10 @@ footer {
   text-decoration: none;
 }
 
+.mail a span i {
+  font-size: 25px;
+}
+
 .icons__github, 
 .icons__linkedin {
   font-size: 64px;
