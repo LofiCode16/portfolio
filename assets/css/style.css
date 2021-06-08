@@ -13,11 +13,16 @@
 }
 
 .dropdown-menu.show{
-  background-color: var(--light);
+  background-color: white;
 } 
 
 .dropdown-item {
+  color: var(--main);
+}
+
+.dropdown-item:hover {
   color: var(--contrast-light);
+  background-color: var(--main);
 }
 
 .main {
@@ -70,11 +75,28 @@ main div.container {
 .front a, .back a {
   text-decoration: none;
   color: var(--main);
+  -webkit-text-stroke: 1px var(--light);
 }
 
 .front a:hover,
 .back a:hover {
   color: var(--contrast-light);
+}
+
+.front a h3,
+.back a h3 {
+  transition: transform 0.3s;
+  font-size: 40px;
+}
+
+.front a h3:hover,
+.back a h3:hover {
+  transform: scale(1.2);
+}
+
+.title {
+  font-size: 60px;
+  display: none;
 }
 
 hr {
@@ -88,7 +110,8 @@ hr {
 } 
 
 .about,
-.experience {
+.experience,
+.project-title {
   color: var(--main);
 }
 
@@ -113,7 +136,7 @@ hr {
 }
 
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .card a:hover,
@@ -125,7 +148,7 @@ hr {
 footer {
   display: none;
   background-color: var(--main);
-  color: var(--contrast-light);
+  color: white;
 }
 
 .front-list li:last-of-type a,
@@ -155,13 +178,18 @@ footer {
 .back-list li a:focus,
 .icons a i:hover,
 .mail a:hover {
-  color: white;
+  color: var(--light);
   text-decoration: none;
 }
 
-.icons__github, .icons__linkedin {
+.icons__github, 
+.icons__linkedin {
   font-size: 64px;
-  color: var(--contrast);
+  color: white;
+}
+
+.mail a {
+  color: white;
 }
 
 .fade-background {
@@ -236,13 +264,12 @@ footer {
   .dropdown-menu.show{
     display: block;
     margin: 0 -25%;
-    padding-left: 30px;
-    background-color: var(--light);
   } 
-
+  
   .dropdown-item {
-    color: var(--contrast-light);
+    padding-left: 40px;
   }
+
 
   .card {
     width: 100%;

@@ -22,7 +22,16 @@ $(document).ready(function(){
     var location =  window.location.href
     var projectType = location.split('=')[1];
 
+    frontProjects.forEach(function(p){
+        $('.front-list').prepend(`<li><a href="${p.url}" target="_blank">${p.name}</a></li>`)
+    });
+
+    backProjects.forEach(function(p){
+        $('.back-list').prepend(`<li><a href="${p.url}" target="_blank">${p.name}</a></li>`)
+    });
+
     $('main .hero').fadeIn(500, function(){
+        $('.title').fadeIn();
         $(this).css('display', 'flex');
         if($(this).width() > 779) {
             $('.hero div').fadeIn();
@@ -50,15 +59,14 @@ $(document).ready(function(){
 
     switch(projectType){
         case 'front': 
-            allProjects(frontProjects, 'Front');
+            allProjects(frontProjects, 'FrontEnd');
             break;
         case 'back': 
-            allProjects(backProjects, 'Back');
+            allProjects(backProjects, 'BackEnd');
             break;
         case undefined: 
             break; 
         default:
-            showProject(projectType);
             break;
     }
 
@@ -88,15 +96,14 @@ function toggleMenu(btn){
 function allProjects(projects, title) {
     var cards = createCardGroup(projects);
 
-    $('main').prepend(`<h2 class="text-center my-5">Proyectos de ${title}</h2>`);
+    $('main').prepend(`
+        <h2 class="text-center my-5 project-title">Proyectos orientados a ${title}</h2>
+        <p class="text-center project-title">Estos proyectos están orientados principalmente a da énfasis en tecnologías de ${title}</p>
+        `);
     $('.projects').html(cards);
     $('.projects').fadeIn(1000);
 }
 
-
-function showProject() {
-    alert('single one')
-}
 
 function createCardGroup(dataArray){
 
