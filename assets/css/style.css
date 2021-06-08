@@ -249,5 +249,10 @@ footer {
     max-width: 100%;
   }
 
+  .experience img, 
+  .study img {
+    height: 200px;
+  }
+
 }
 
