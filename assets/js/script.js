@@ -2,10 +2,10 @@ $(document).ready(function(){
     
     var frontProjects = [
         {
-            name: 'Este front!',
-            desc: 'He creado este portfolio usando los componentes mas básicos de la web (HTML, CSS y JS), ademas de algunos otros elementos variados, échale un vistazo!',
-            image: 'assets/images/front.jpg',
-            url: 'https://github.com/diegoski007/portfolio'
+            name: 'React Ecommerce',
+            desc: 'Una pequeña tienda creada con React16, la cual cuenta con las acciones básicas y datos extraídos de una BD creada con un servidor REST falso',
+            image: 'assets/images/ecommerce.JPG',
+            url: 'https://trusting-easley-4571b0.netlify.app/'
         }
 
     ];
