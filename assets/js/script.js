@@ -6,8 +6,13 @@ $(document).ready(function(){
             desc: 'Una pequeña tienda creada con React16, la cual cuenta con las acciones básicas y datos extraídos de una BD creada con un servidor REST falso.',
             image: 'assets/images/ecommerce.JPG',
             url: 'https://trusting-easley-4571b0.netlify.app/'
+        },
+        {
+            name: 'Movieflix',
+            desc: 'Una galería con las mejores películas y estrenos del cine. La app está creada con React16 e incluye información sobre las películas y tráilers, las cuales son obtenidas desde la API de The MovieDb.',
+            image: 'assets/images/movieflix.JPG',
+            url: 'https://condescending-engelbart-ffeaea.netlify.app/'
         }
-
     ];
 
     var backProjects = [
