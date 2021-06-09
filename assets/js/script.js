@@ -21,6 +21,18 @@ $(document).ready(function(){
             desc: 'Red social inspirada en Instagram. Fue creada con el principal objetivo de nivelar a mis estudiantes (más detalles en GitHub). Está creada en Ruby on Rails y servida en Heroku.',
             image: 'assets/images/instafotos.JPG',
             url: 'https://instafotosapp.herokuapp.com/'
+        },
+        {
+            name: 'Georails',
+            desc: 'Implementación simple de un mapa dinámico multipunto usando Ruby on Rails, en el cual se pueden ver todas las direcciones a la vez, o alguna en particular.',
+            image: 'assets/images/geo.JPG',
+            url: 'https://georails.herokuapp.com/'
+        },
+        {
+            name: 'Ecommerce Paypal',
+            desc: 'Ecommerce básico desarrollado en Ruby on Rails, el cual permite la autenticación de usuarios para poder realizar las compras y realizar pagos a través de PayPal (en mantención), además de contar con gráficos con información sobre los productos.',
+            image: 'assets/images/ecommerce_paypal.JPG',
+            url: 'https://ecommerce-pp.herokuapp.com/'
         }
     ];
 
