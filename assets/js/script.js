@@ -36,7 +36,7 @@ $(document).ready(function(){
         },
         {
             name: 'Photo Gallery (En desarrollo)',
-            desc: 'Galería de fotos pensada para fotógrafos amateurs y personas que quieran promocionar lugares turísticos.',
+            desc: 'Galería de fotos pensada para fotógrafos amateurs y personas que quieran promocionar lugares turísticos. El desarrollo se ha realizado utilizando Ruby on Rails y los test con RSpec',
             image: 'assets/images/back.jpg',
             url: 'https://github.com/diegoperez24/photo_gallery_app'
         }
