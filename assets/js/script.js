@@ -33,6 +33,12 @@ $(document).ready(function(){
             desc: 'Ecommerce básico desarrollado en Ruby on Rails, el cual permite la autenticación de usuarios para poder realizar las compras y realizar pagos a través de PayPal (en mantención), además de contar con gráficos con información sobre los productos.',
             image: 'assets/images/ecommerce_paypal.JPG',
             url: 'https://ecommerce-pp.herokuapp.com/'
+        },
+        {
+            name: 'Photo Gallery (En desarrollo)',
+            desc: 'Galería de fotos pensada para fotógrafos amateurs y personas que quieran promocionar lugares turísticos.',
+            image: 'assets/images/back.jpg',
+            url: 'https://github.com/diegoperez24/photo_gallery_app'
         }
     ];
 
