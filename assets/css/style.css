@@ -54,6 +54,7 @@ main div.container {
   display: none;
   padding: 100px;
   border-radius: 60px;
+  opacity: 0.4;
   -webkit-transition-duration: 1.5s;
 }
 
@@ -62,6 +63,7 @@ main div.container {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 1;
 }
 
 .front:hover {
