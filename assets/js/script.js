@@ -151,7 +151,7 @@ function createCardGroup(dataArray){
 function createCard(data) {
 
     return `
-    <div class="card my-5">
+    <div class="card mt-5">
         <a href="${data.url}" target="_blank">
             <img src="${data.image}" class="card-img-top" height="200px">
             <div class="card-body">
