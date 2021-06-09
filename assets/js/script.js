@@ -115,7 +115,7 @@ function allProjects(projects, title) {
 
     $('main').prepend(`
         <h2 class="text-center my-5 project-title">Proyectos orientados a ${title}</h2>
-        <p class="text-center project-title">Estos proyectos están orientados principalmente a da énfasis en tecnologías de ${title}</p>
+        <p class="text-center project-title">Estos proyectos están orientados principalmente a dar énfasis en tecnologías de ${title}</p>
         `);
     $('.projects').html(cards);
     $('.projects').fadeIn(1000);
